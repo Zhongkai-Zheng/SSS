@@ -1,3 +1,9 @@
+Router.configure({
+	layoutTemplate: 'layout',
+	loadingTemplate: 'loading',
+	notFoundTemplate: 'notFound'
+});
+
 Router.route('/', {
 	name: 'mainPage', 
 	template: 'mainPage'
@@ -27,3 +33,5 @@ Router.route('/buybook2', {
 	name: 'buybook2', 
 	template: 'buybook2'
 });
+
+Router.onBeforeAction('loading');
