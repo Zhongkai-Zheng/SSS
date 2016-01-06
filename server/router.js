@@ -5,8 +5,8 @@
 });
 
 Router.route('/', {
-	name: 'mainPage', 
-	template: 'mainPage'
+	name: 'home', 
+	template: 'home'
 });
 
 Router.route('/login', {
