@@ -1,15 +1,9 @@
-Template.login.events({
-	'submit form': function(event){
-		event.preventDefault();
-		email = $('[name=email]').val();
-		var password = $('[name=password]').val();
-		Meteor.loginWithPassword(email, password, function(error){
-			if(error){
-				console.log(error.reason);
-			} 
-			else{
-				Router.go("main");
-			}
-		});
-	}
-});
+<template name = "login">
+	{{>navigation}}
+	<h2>Login</h2>
+	<form class="login">
+		<p>Email: <input type="email" name="email"></p>
+		<p>Password: <input type="password" name="password"></p>
+		<p><input type="submit" value="Login"></p>
+    </form>
+</template>
