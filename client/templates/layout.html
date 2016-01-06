@@ -1,13 +1,21 @@
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SSS</title>
-</head>
-
 <template name="layout">
-	<body>
-	  <div class="container">
-	  	{{> header}} 
-		  {{> yield}}
-		</div>
-	</body>
+	<div class="navbar">
+			<div class="container">
+				<ul class="nav navbar-nav navbar-right">
+					{{#if currentUser}}
+						<li><a href="{{pathFor route='buybook'}}">Buybook</a></li>
+						<li><a href="{{pathFor route='buybook2'}}">Buybook2</a></li>
+						<li><a href="{{pathFor route='sellbook'}}">Sellbook</a></li>
+        				<li><a href="#" class="logout">Logout</a></li>
+        				
+
+				
+        			{{else}}
+        				<li><a href="{{pathFor route='login'}}">Login</a></li>
+						<li><a href="{{pathFor route='register'}}">Register</a></li>
+    				{{/if}}
+    				
+				</ul>
+			</div>
+	</div>
 </template>

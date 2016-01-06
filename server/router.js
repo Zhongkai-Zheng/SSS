@@ -1,12 +1,12 @@
  Router.configure({
-	layoutTemplate: 'layout',
+	//layoutTemplate: 'layout',
 	loadingTemplate: 'loading',
 	notFoundTemplate: 'notFound'
 });
 
 Router.route('/', {
-	name: 'home', 
-	template: 'home'
+	name: 'main', 
+	template: 'main'
 });
 
 Router.route('/login', {
