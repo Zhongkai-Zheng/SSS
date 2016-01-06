@@ -1,12 +1,24 @@
 <template name="layout">
-  <div class="container">
-    <header>
-      {{> nav }}
-    </header>
-    {{> yield}}
-  </div>
-</template>
+	<div class="navbar">
+			<div class="container">
+				<ul class="nav navbar-nav navbar-right">
+					{{#if currentUser}}
+						<li><a href="{{pathFor route='buybook'}}">Buybook</a></li>
+						<li><a href="{{pathFor route='buybook2'}}">Buybook2</a></li>
+						<li><a href="{{pathFor route='sellbook'}}">Sellbook</a></li>
+        				<li><a href="#" class="logout">Logout</a></li>
+        				
 
-<template name='nav'>
-  Nav goes here...
+				
+        			{{else}}
+        				<li><a href="{{pathFor route='login'}}">Login</a></li>
+						<li><a href="{{pathFor route='register'}}">Register</a></li>
+    				{{/if}}
+    				
+				</ul>
+			</div>
+	</div>
+  <!--<div class="container">
+    {{> yield}}
+  </div>-->
 </template>
