@@ -21,3 +21,5 @@ insecure                # Allow all DB writes from clients (for prototyping)
 iron:router
 accounts-ui
 accounts-password
+cfs:standard-packages
+cfs:gridfs
