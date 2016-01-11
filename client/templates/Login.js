@@ -8,7 +8,7 @@ Template.login.events({
 				console.log(error.reason);
 			} 
 			else{
-				Router.go("main");
+				Router.go("home");
 			}
 		});
 	}
