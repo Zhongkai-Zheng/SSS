@@ -1,5 +1,5 @@
 template.BuyBook2.events({
-	'submit #searchForm': function (event) {
+	'submit form': function (event) {
 		event.preventDefault();
 	}
 });
