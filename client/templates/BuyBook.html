@@ -1,15 +1,10 @@
 <template name = "buybook">
 	<h1>Buy some books here</h1>
 	<table>
-	    <tr>
-	    	<th>Chemistry</th>
-	    	<th>Physics</th>
-	    	<th>Biology</th>
-	    </tr>
-	    <tr>
-	    	<th>C</th>
-	    	<th>P</th>
-	    	<th>B</th>
-	    </tr>
+	<ul>
+		{{#each images}}
+		<li>{{title}} <i>({{username}})</i></li>
+		{{/each}}
+	</ul>
 	</table>
 </template>
