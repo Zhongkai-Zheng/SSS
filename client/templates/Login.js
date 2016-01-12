@@ -18,4 +18,3 @@ Template.login.events({
 		});
 	}
 });
-
