@@ -1,5 +1,5 @@
 template.BuyBook2.events({
-	'submit form': function (event) {
-		event.preventDefault();
-	}
+	// 'submit form': function (event) {
+	// 	event.preventDefault();
+	// }
 });

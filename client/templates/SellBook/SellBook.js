@@ -37,8 +37,9 @@ Template.SellBook.events({
 				} else {
 					console.log("Success");
 				}
-			})
+			});
 
+			Router.go('/buybook');
 		}
 	}
 })
