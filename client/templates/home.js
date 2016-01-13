@@ -1,5 +1,9 @@
 Template.home.helpers({
   'email': function() {
-    return Meteor.user().emails[0].address;
+  	try {
+    	return Meteor.user().emails[0].address;
+	} catch (e) {
+		// silently kill errors
+	}
   }
 })

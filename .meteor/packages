@@ -23,6 +23,7 @@ accounts-ui
 accounts-password
 cfs:standard-packages
 cfs:gridfs
+twbs:bootstrap
 
 msavin:mongol
 
