@@ -1,17 +1,30 @@
 Template.buybook.rendered = function() {
-  Session.set('clickedAssignment', null);
+  Session.set('clickedImage', null);
+}
+
+Template.buybook.created = function() {
+  var self = this;
+
+  self.limit = new ReactiveVar;
+  self.limit.set(parseInt(Meteor.settings.public.recordsPerPage));
+  
+  Tracker.autorun(function() {
+    Meteor.subscribe('images', self.limit.get());
+  });
 }
 
 Template.buybook.helpers({
-	'clickedAssignment': function() {
-    return this._id == Session.get('clickedAssignment') ? 'text-primary' : '';
+	'clickedImage': function() {
+    return this._id == Session.get('clickedImage') ? 'text-primary' : '';
   },
-
+ 	'images': function() {
+    return Images.find();
+  }
 });
 
   Template.buybook.events({
   	'click .assignment': function() {
-    Session.set('clickedAssignment', this._id);
+    Session.set('clickedImage', this._id);
   },
   
 });
