@@ -19,7 +19,11 @@ Template.buybook.helpers({
   },
  	'images': function() {
     return Images.find();
-  }
+  },
+  'selectedImage': function(){
+    var title = this.title;
+    return "selected"
+  },
 });
 
   Template.buybook.events({
