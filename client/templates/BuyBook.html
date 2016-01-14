@@ -2,7 +2,7 @@
 	<h1>Buy some books here</h1>
 	<ul>
 	{{#each images}}
-		<li> {{title}} <i>(Author: {{firstname}} {{lastname}}) (Seller: {{username}})</i></li>
+		<li> {{title}} <i>(Author: {{firstname}} {{lastname}}) (Seller: {{username}})</i> {{> image}} </li>
 	{{/each}}
 	</ul>
 </template>
