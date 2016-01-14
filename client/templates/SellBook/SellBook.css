@@ -1,0 +1,22 @@
+h1{
+	padding-top: 100px;
+}
+#look{
+	width:400px;
+	border: blue 1px solid;
+	background-color: #acd1b2;
+	float: right;
+	margin-right: 450px;
+}
+form{
+	padding-top: 50px;
+	color:purple;
+	text-align: center;
+
+}
+form #fileInput{
+	padding-top: 100px;
+	padding-left: 150px;
+}
+
+
