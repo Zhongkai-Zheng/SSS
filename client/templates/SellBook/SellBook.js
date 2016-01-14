@@ -21,7 +21,7 @@ Template.SellBook.events({
 			for (var i = 0, ln = files.length; i < ln; i++) {
 				var newFile = new FS.File(files[i]);
 
-				newFile.username = user.username;
+				newFile.username = Meteor.user().emails[0].address;
 				newFile.userId = user._id;
 				newFile.title = title;
 				newFile.firstname = firstname;

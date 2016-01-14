@@ -1,8 +1,8 @@
 <template name = "buybook">
 	<h1>Buy some books here</h1>
 	<ul>
-		{{#each images}}
-		<li class="{{clickedAssignment}} clickable assignment"> {{title}} <i>({{firstname}} {{lastname}})</i></li>
-		{{/each}}
+	{{#each images}}
+		<li> {{title}} <i>(Author: {{firstname}} {{lastname}}) (Seller: {{username}})</i></li>
+	{{/each}}
 	</ul>
 </template>
