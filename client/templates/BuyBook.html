@@ -2,7 +2,7 @@
 	<h1>Buy some books here</h1>
 	<ul>
 		{{#each images}}
-		<li> {{title}} <i>({{username}})</i></li>
+		<li class="{{clickedAssignment}} clickable assignment"> {{title}} <i>({{firstname}} {{lastname}})</i></li>
 		{{/each}}
 	</ul>
 </template>
