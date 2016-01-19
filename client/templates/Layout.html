@@ -1,12 +1,20 @@
 <template name="layout">
 	<div class="navbar">
 		<div class="container">
-			<div class="nav navbar-nav navbar-right">
+			<div class="nav">
 				{{#if currentUser}}
-				<a href="{{pathFor route='buybook'}}">Buybook</a>
+				<div class="block">
+					<a href="{{pathFor route='buybook'}}">Buybook</a>
+				</div>
+				<div class="block">
 				<a href="{{pathFor route='buybook2'}}">Buybook2</a>
+				</div>
+				<div class="block">
 				<a href="{{pathFor route='sellbook'}}">Sellbook</a>
+				</div>
+				<div class="block">
 				<a href="#" class="logout">Logout</a>
+				</div>
 
 
 				
