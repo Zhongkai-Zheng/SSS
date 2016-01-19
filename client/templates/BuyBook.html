@@ -1,10 +1,8 @@
 <template name = "buybook">
 	<h1>Buy some books here</h1>
-	<table>
 	<ul>
-		{{#each images}}
-		<li>{{title}} <i>({{username}})</i></li>
-		{{/each}}
+	{{#each images}}
+		<li> {{title}} <i>(Author: {{firstname}} {{lastname}}) (Seller: {{username}})</i> {{> image}} </li>
+	{{/each}}
 	</ul>
-	</table>
 </template>
