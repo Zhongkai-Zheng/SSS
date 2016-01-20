@@ -1,7 +1,9 @@
 h1{
 	padding-top: 100px;
 }
-
+.form-horizontal{
+	height: 300px;
+}
 form{
 	padding-top: 50px;
 	color:purple;
@@ -11,17 +13,24 @@ form{
 	background-color: #acd1b2;
 	float: center;
 	margin:auto;
+	height: 400px;
 
 }
-.form-group{
+.form-group2{
+	height: 50px;
+
 	padding-left: 20px;
 	padding-right: 20px;
 }
 form #fileInput{
-	padding-left: 150px;
+	padding-top: 10px;
+	padding-bottom: 20px;
 	text-align: left;
 }
+form #submitButton{
+	text-align: left;
 
+}
 
 
 
