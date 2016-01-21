@@ -2,7 +2,7 @@ Template.SellBook.events({
 	'submit form': function(event, template){
 
 		event.preventDefault();
-		bounceLoogedOut();
+		bounceLoggedOut();
 
 		if (Meteor.user() != null) {			
 			var user = Meteor.user();
