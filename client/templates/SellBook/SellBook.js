@@ -13,9 +13,7 @@ Template.SellBook.events({
 			var firstname = event.target.firstname;
 			var lastname = event.target.lastname;
 
-			var title = event.target.title.value;
-			var firstname = event.target.firstname.value;
-			var lastname = event.target.lastname.value;
+
 
 
 			for (var i = 0, ln = files.length; i < ln; i++) {
