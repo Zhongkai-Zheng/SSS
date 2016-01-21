@@ -7,13 +7,19 @@
     		</div>
     		<ul class="nav navbar-nav">
     			<li><a href="{{pathFor route='buybook'}}">Buybook</a></li>
-      			<li><a href="{{pathFor route='buybook2'}}">Buybook2</a></li>
       			<li><a href="{{pathFor route='sellbook'}}">Sellbook</a></li> 
       			<li><a href="#" class="logout">Logout</a></li> 
     		</ul>
 			{{else}}
-				<a href="{{pathFor route='login'}}">Login</a>
-				<a href="{{pathFor route='register'}}">Register</a>
+			<div class="navbar-header">
+      			<a class="navbar-brand" href="{{pathFor route='home'}}">SSS</a>
+    		</div>
+    		<ul class="nav navbar-nav">
+    			<li><a href="{{pathFor route='buybook'}}">Buybook</a></li>
+      			<li><a href="{{pathFor route='sellbook'}}">Sellbook</a></li> 
+      		</ul>
+				<!--<a href="{{pathFor route='login'}}">Login</a>
+				<a href="{{pathFor route='register'}}">Register</a>-->
 			{{/if}}
 		</div>
 	</nav>
