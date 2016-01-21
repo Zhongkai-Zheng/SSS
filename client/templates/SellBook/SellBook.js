@@ -2,7 +2,9 @@ Template.SellBook.events({
 	'submit form': function(event, template){
 
 		event.preventDefault();
-		bounceLoggedOut();
+		if (Meteor.userId() == null) {
+			throw new Meteor.Error('unauthorized', 'you need to be logged in for that!');
+		}
 
 		if (Meteor.user() != null) {			
 			var user = Meteor.user();
