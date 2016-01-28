@@ -1,5 +1,5 @@
 Template.login.events({
-	'click .register': function(event){
+	'click #register': function(event){
 			event.preventDefault();
 			Router.go('register');
 		},
