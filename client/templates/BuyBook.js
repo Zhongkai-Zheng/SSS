@@ -44,7 +44,7 @@ Template.buybook.helpers({
 Template.buybook.rendered = function() {
   Session.set('search-box', '');
   var self = this;
-  // is triggered every time we scroll
+ 
   $(window).scroll(function() {
     if ($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
       incrementLimit(self);
@@ -61,7 +61,7 @@ Template.buybook.helpers({
     if (search == '') {
       return Images.find({}, {$sort: {title: 1}}); 
     } else {
-      return Images.find({title: {$regex: '(' + search + ')\\w+', $options: 'i'}}, {$sort: {title: 1}})
+      return Images.find({title: {$regex: '(' + search + ')', $options: 'i'}}, {$sort: {title: 1}})
     }
   }
 });
