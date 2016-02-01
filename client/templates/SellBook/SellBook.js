@@ -1,3 +1,4 @@
+PlayersList = new Mongo.Collection('books');
 Template.SellBook.events({
 	'submit form': function(event, template){
 
@@ -10,7 +11,6 @@ Template.SellBook.events({
 			var user = Meteor.user();
 			var fileInput = event.target.fileInput;
 			var files = fileInput.files;
-
 			var title = event.target.title.value;
 			var firstname = event.target.firstname.value;
 			var lastname = event.target.lastname.value;
@@ -22,6 +22,7 @@ Template.SellBook.events({
 			newFile.title = title;
 			newFile.firstname = firstname;
 			newFile.lastname = lastname;
+
 			}
 
 
