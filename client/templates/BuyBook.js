@@ -42,6 +42,7 @@ Template.buybook.helpers({
 }
 
 Template.buybook.rendered = function() {
+  Session.set('search-box', '');
   var self = this;
   // is triggered every time we scroll
   $(window).scroll(function() {
@@ -54,6 +55,14 @@ Template.buybook.rendered = function() {
 Template.buybook.helpers({
   'images': function() {
     return Images.find();
+  },
+  search: function() {
+    var search = Session.get('search-box');
+    if (search == '') {
+      return Images.find({}, {$sort: {title: 1}}); 
+    } else {
+      return Images.find({title: {$regex: '(' + search + ')\\w+', $options: 'i'}}, {$sort: {title: 1}})
+    }
   }
 });
 
@@ -68,30 +77,13 @@ var options = {
 };
 var fields = ['packageName', 'description'];
 
-PackageSearch = new SearchSource('packages', fields, options);
 
 Template.searchResult.helpers({
-  getPackages: function() {
-    return PackageSearch.getData({
-      transform: function(matchText, regExp) {
-        return matchText.replace(regExp, "<b>$&</b>")
-      },
-      sort: {isoScore: -1}
-    });
-  },
   
-  isLoading: function() {
-    return PackageSearch.getStatus().loading;
-  }
 });
 
-Template.searchResult.rendered = function() {
-  PackageSearch.search('');
-};
-
 Template.searchBox.events({
-  "keyup #search-box": _.throttle(function(e) {
-    var text = $(e.target).val().trim();
-    PackageSearch.search(text);
-  }, 200)
+  "keyup #search-box": function(ev) {
+    Session.set('search-box', $(ev.target).val());
+  }
 });
