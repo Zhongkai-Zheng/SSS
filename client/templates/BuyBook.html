@@ -1,11 +1,4 @@
-<body>
-  <div class="container">
-    {{> searchBox }}
-    {{> searchResult}}
-  </div>
-</body>
 <template name = "buybook">
-  {{>layout}}
   <h1>Buy some books here</h1>
     <ul>
   {{#each search}}
@@ -15,6 +8,13 @@
   </ul>
 
 </template>
+<body>
+   {{>layout}}
+  <div class="container">
+    {{> searchBox }}
+    {{> searchResult}}
+  </div>
+  </body>
 <template name="searchBox">
   <input type="text" id="search-box" placeholder="search books here" />
 </template>
