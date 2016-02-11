@@ -1,0 +1,9 @@
+/*.image-container {
+	width: 200px;
+	height: 120px;
+}*/
+
+.image-container img {
+	height: 120px;
+	width: auto;
+}
