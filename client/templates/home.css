@@ -13,3 +13,9 @@ p{
 	color:black;
 	font-size: 14px;
 }
+
+body{
+	background-image:url('../../images/background.jpg');
+	color:blue;
+	font-size: 14px;
+}
