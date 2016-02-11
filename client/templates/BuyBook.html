@@ -8,6 +8,9 @@
   {{>layout}}
   <h1>Buy some books here</h1>
     <ul>
+  {{#if noBooks}}
+    <h4>There are no books for sale :(</h4>
+  {{/if}}
   {{#each search}}
     <li> {{title}} <i>(Author: {{firstname}} {{lastname}}) (Seller: {{username}})</i> {{> image}} </li>
     {{debug}}

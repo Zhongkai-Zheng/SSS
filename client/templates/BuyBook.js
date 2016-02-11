@@ -21,6 +21,13 @@ Template.buybook.helpers({
     return Images.find();
 
   },
+  	'noBooks': function() {
+  		if (Images.find().count() == 0) {
+  			return true;
+  		} else {
+  			return false;
+  		}
+  	},
 });
 
   Template.buybook.events({

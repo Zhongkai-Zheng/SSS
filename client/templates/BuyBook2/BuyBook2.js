@@ -1,5 +1,5 @@
-template.BuyBook2.events({
-	// 'submit form': function (event) {
-	// 	event.preventDefault();
-	// }
+Template.BuyBook2.events({
+	'click #reserve': function() {
+		console.log(Router.current().params._id);
+	},
 });
