@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 li{
   font-size: 20px;
   color: blue;
@@ -23,6 +24,10 @@ li{
   position: relative;
   border: 3px solid green;
   display: inline-block;
+=======
+#heading {
+  margin: 50px 0 20px 0;
+>>>>>>> 6fd18719289656e7fc5d8f9d7f04d99a6dea5d10
 }
 
 #search-box {
@@ -34,7 +39,7 @@ li{
 }
 
 #search-result {
-  
+  margin: 20px 0 100px 0;
 }
 
 #search-meta {

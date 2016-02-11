@@ -1,16 +1,8 @@
-
 p{
 	text-align: center;
 	font-size: 50px;
 	color: black;
 	font-family: Verdana;
-}
-h2{
-	text-align: center;
-	font-size: 50px;
-	color: blue;
-	font-family: Verdana;
-	padding-top: 50px;
 }
 form{
 	position: relative;
