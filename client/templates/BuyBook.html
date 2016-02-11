@@ -5,12 +5,21 @@
     {{> searchResult}}
   </div>
   <h1>Buy some books here</h1>
-    <ul>
+    
   {{#each search}}
-    <li> {{title}} <i>(Author: {{firstname}} {{lastname}}) (Seller: {{username}})</i> {{> image}} </li>
+       <ul>
+          <li> {{title}}   </li>
+
+  <div class="text">
+          <div id="image">{{> image}}</div>
+          <div id="author">Author: {{firstname}} {{lastname}}<br> Seller: {{username}}</div>
     {{debug}}
+    </div>
+        </ul>
+    
   {{/each}}
-  </ul>
+
+
 </template>
    
 
