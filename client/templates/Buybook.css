@@ -1,4 +1,5 @@
-<<<<<<< HEAD
+
+
 li{
   font-size: 20px;
   color: blue;
@@ -7,27 +8,20 @@ li{
   text-align: left;
 }
 #author{
-  height:80px;
-  width:400px;
-  position: relative;
-  margin-bottom: 100px;
-  border:3px solid red;
-  text-align: left;
-  font-size: 20px;
+  font-size: 2em;
+  margin-left: 2em;
 }
 #image{
-  border:3px solid blue;
-  width: 400px;
+  width: auto;
+  height: 150px;
 }
 .text{
   width:800px;
   position: relative;
-  border: 3px solid green;
-  display: inline-block;
-=======
-#heading {
-  margin: 50px 0 20px 0;
->>>>>>> 6fd18719289656e7fc5d8f9d7f04d99a6dea5d10
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
 }
 
 #search-box {
@@ -39,7 +33,7 @@ li{
 }
 
 #search-result {
-  margin: 20px 0 100px 0;
+
 }
 
 #search-meta {
