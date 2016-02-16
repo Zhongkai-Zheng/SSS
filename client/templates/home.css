@@ -17,4 +17,5 @@ body{
 	background-image:url('../../images/background.jpg'); 
 	color:blue;
 	font-size: 14px; 
+	background-size: cover;
 }
