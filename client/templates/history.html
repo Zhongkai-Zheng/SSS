@@ -1,0 +1,23 @@
+<template name = "history">
+	{{>layout}}
+	<h1>Order History</h1>
+	<div class="container">
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Book Name</th>
+				<th>Seller</th>
+				<th>Author</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each book}}
+			<tr class="book {{isSelected}}">
+				<td>{{name}}</td>
+				<td>{{price}}</td>
+			</tr>
+			{{/each}}
+		</tbody>
+	</table>
+	</div>
+</template>
