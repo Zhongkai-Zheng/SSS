@@ -18,7 +18,7 @@ Template.buybook.helpers({
     return this._id == Session.get('clickedImage') ? 'text-primary' : '';
   },
  	'images': function() {
-    return Images.find();
+    return Images.find({reserved: false});
 
   },
   	'noBooks': function() {
@@ -61,14 +61,14 @@ Template.buybook.rendered = function() {
 
 Template.buybook.helpers({
   'images': function() {
-    return Images.find();
+    return Images.find({reserved: false});
   },
   search: function() {
     var search = Session.get('search-box');
     if (search == '') {
-      return Images.find({}, {$sort: {title: 1}}); 
+      return Images.find({reserved: false}, {$sort: {title: 1}}); 
     } else {
-      return Images.find({title: {$regex: '(' + search + ')', $options: 'i'}}, {$sort: {title: 1}})
+      return Images.find({title: {$regex: '(' + search + ')', $options: 'i'}, reserved: false}, {$sort: {title: 1}})
     }
   }
 });
