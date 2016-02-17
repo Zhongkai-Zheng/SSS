@@ -15,6 +15,7 @@ Template.SellBook.events({
 			var firstname = event.target.firstname.value;
 			var lastname = event.target.lastname.value;
 			var isbn = event.target.isbn.value; 
+			var reserved = false;
 
 		for (var i = 0, ln = files.length; i < ln; i++) {
 			var newFile = new FS.File(files[i]);
@@ -24,7 +25,7 @@ Template.SellBook.events({
 			newFile.firstname = firstname;
 			newFile.lastname = lastname;
 			newFile.isbn=isbn;
-
+			newFile.reserved = reserved;
 			}
 
 

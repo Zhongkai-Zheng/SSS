@@ -5,7 +5,10 @@
     {{> searchResult}}
   
   <h1>Buy some books here</h1>
-    
+  {{#if noBooks}}
+    <h4>There are no books for sale :(</h4>
+  {{/if}}
+  <ul>
   {{#each search}}
        <ul>
           <li> {{title}} <br>ISBN:{{isbn}}  </li>
@@ -18,6 +21,7 @@
         </ul>
     
   {{/each}}
+  </ul>
 </div>
 
 </template>
