@@ -2,11 +2,17 @@
 
 li{
   font-size: 20px;
-  color: blue;
+  color: black;
   font-family: Verdana;
   padding-top: 30px;
   text-align: left;
 }
+
+.buybookui{
+  background-color: white;
+  border: 1px solid red;
+}
+
 #author{
   font-size: 2em;
   margin-left: 2em;
@@ -38,7 +44,7 @@ li{
 
 #search-meta {
   font-size: 13px;
-  color: #666;
+  color: black;
   height: 15px;
 }
 
@@ -50,4 +56,9 @@ li{
 
 .package .name {
   font-weight: 400;
+}
+
+.listviewbuybook{
+  overflow: scroll;
+  height: 400px;
 }

@@ -5,9 +5,10 @@
     {{> searchResult}}
   
   <h1>Buy some books here</h1>
-    
-  {{#each search}}
-       <ul>
+  
+        <div class="listviewbuybook">
+        {{#each search}}
+       <ol class="buybookui">
           <li> {{title}} <br>ISBN:{{isbn}}  </li>
 
   <div class="text">
@@ -15,9 +16,9 @@
           <div id="author">Author: {{firstname}} {{lastname}}<br> Seller: {{username}}</div>
     {{debug}}
     </div>
-        </ul>
-    
-  {{/each}}
+        </ol>
+        {{/each}}
+        </div>
 </div>
 
 </template>
