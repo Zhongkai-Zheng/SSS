@@ -8,7 +8,7 @@
     
   {{#each search}}
        <ul>
-          <li> {{title}}   </li>
+          <li> {{title}} <br>ISBN:{{isbn}}  </li>
 
   <div class="text">
           <div id="image">{{> image}}</div>
@@ -25,6 +25,11 @@
 
 <template name="searchBox">
   <input type="text" id="search-box" placeholder="search books here" />
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" id="searchbyisbn"> Search by ISBN
+    </label>
+  </div>
 </template>
 
 <template name="searchResult">

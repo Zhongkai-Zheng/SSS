@@ -60,8 +60,10 @@ Template.buybook.helpers({
     var search = Session.get('search-box');
     if (search == '') {
       return Images.find({}, {$sort: {title: 1}}); 
+    } else if (search !='' && !$('#searchbyisbn').prop('checked')){
+      return Images.find({title: {$regex: '(' + search + ')', $options: 'i'}}, {$sort: {title: 1}});
     } else {
-      return Images.find({title: {$regex: '(' + search + ')', $options: 'i'}}, {$sort: {title: 1}})
+      return Images.find({isbn: {$regex: '(' + search + ')', $options: 'i'}}, {$sort: {isbn: 1}});
     }
   }
 });
@@ -83,7 +85,7 @@ Template.searchResult.helpers({
 });
 
 Template.searchBox.events({
-  "keyup #search-box": function(ev) {
+  "keyup #search-box, click .checkbox": function(ev) {
     Session.set('search-box', $(ev.target).val());
   }
 });
