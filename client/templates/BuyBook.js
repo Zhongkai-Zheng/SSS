@@ -85,7 +85,7 @@ Template.searchResult.helpers({
 });
 
 Template.searchBox.events({
-  "keyup #search-box, click .checkbox": function(ev) {
+  "keyup #search-box": function(ev) {
     Session.set('search-box', $(ev.target).val());
   }
 });
