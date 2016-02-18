@@ -18,9 +18,16 @@ Template.buybook.helpers({
     return this._id == Session.get('clickedImage') ? 'text-primary' : '';
   },
  	'images': function() {
-    return Images.find();
+    return Images.find({reserved: false});
 
   },
+  	'noBooks': function() {
+  		if (Images.find().count() == 0) {
+  			return true;
+  		} else {
+  			return false;
+  		}
+  	},
 });
 
   Template.buybook.events({
@@ -54,16 +61,16 @@ Template.buybook.rendered = function() {
 
 Template.buybook.helpers({
   'images': function() {
-    return Images.find();
+    return Images.find({reserved: false});
   },
   search: function() {
     var search = Session.get('search-box');
     if (search == '') {
-      return Images.find({}, {$sort: {title: 1}}); 
+      return Images.find({reserved: false}, {$sort: {title: 1}}); 
     } else if (search !='' && !$('#searchbyisbn').prop('checked')){
-      return Images.find({title: {$regex: '(' + search + ')', $options: 'i'}}, {$sort: {title: 1}});
+      return Images.find({title: {$regex: '(' + search + ')', $options: 'i'}, reserved: false}, {$sort: {title: 1}});
     } else {
-      return Images.find({isbn: {$regex: '(' + search + ')', $options: 'i'}}, {$sort: {isbn: 1}});
+      return Images.find({isbn: {$regex: '(' + search + ')', $options: 'i'}, reserved: false}, {$sort: {isbn: 1}});
     }
   }
 });
@@ -85,7 +92,7 @@ Template.searchResult.helpers({
 });
 
 Template.searchBox.events({
-  "keyup #search-box, click .checkbox": function(ev) {
+  "keyup #search-box": function(ev) {
     Session.set('search-box', $(ev.target).val());
   }
 });
