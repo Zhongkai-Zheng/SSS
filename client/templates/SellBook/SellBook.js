@@ -26,6 +26,7 @@ Template.SellBook.events({
 			newFile.lastname = lastname;
 			newFile.isbn=isbn;
 			newFile.reserved = reserved;
+			newFile.reservedId = null;
 			}
 
 

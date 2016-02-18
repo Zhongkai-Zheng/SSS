@@ -1,7 +1,7 @@
 Template.login.events({
 	'click #register': function(event){
 			event.preventDefault();
-			Router.go('register');
+			Router.go('/register');
 		},
 
 	'submit form': function(event){
@@ -13,7 +13,7 @@ Template.login.events({
 				console.log(error.reason);
 			} 
 			else{
-				Router.go("home");
+				Router.go("/");
 			}
 		});
 	}

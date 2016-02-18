@@ -1,0 +1,15 @@
+<template name="MyReservations">
+	{{> layout}}
+
+	{{#each search}}
+		<ul>
+          <li> {{title}} <br>ISBN:{{isbn}}  </li>
+
+          <div class="text">
+            <div id="image">{{> image}}</div>
+            <div id="author">Author: {{firstname}} {{lastname}}<br> Seller: {{username}}</div>
+            {{debug}}
+          </div>
+        </ul>
+	{{/each}}
+</template>
