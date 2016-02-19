@@ -1,8 +1,11 @@
+.white {
+  color: white;
+}
 
 
 li{
   font-size: 20px;
-  color: blue;
+  color: white;
   font-family: Verdana;
   padding-top: 30px;
   text-align: left;
@@ -16,9 +19,11 @@ li{
   height: 150px;
 }
 .text{
+  font-size: 10px;
   width:800px;
   position: relative;
   display: flex;
+  color:white;
   flex-direction: row;
   align-items: center;
 
@@ -31,7 +36,9 @@ li{
   outline: 0;
   font-size: 15px;
 }
-
+.checkbox{
+  color:white;
+}
 #search-result {
 
 }
@@ -47,6 +54,11 @@ li{
   border-bottom: 1px solid #eee;
   padding: 8px 0;
 }
+.listviewbuybook{
+  overflow: scroll;
+  height: 400px;
+
+} 
 
 .package .name {
   font-weight: 400;

@@ -1,27 +1,31 @@
 <template name = "buybook">
   {{>layout}}
-   <div class="container">
+  <div class="container">
     {{> searchBox }}
     {{> searchResult}}
-  
-  <h1>Buy some books here</h1>
-    
-  {{#each search}}
-       <ul>
-          <li> {{title}} <br>ISBN:{{isbn}}  </li>
 
-  <div class="text">
-          <div id="image">{{> image}}</div>
-          <div id="author">Author: {{firstname}} {{lastname}}<br> Seller: {{username}}</div>
-    {{debug}}
+    <h1 class="white">Buy some books here</h1>
+    <div class="listviewbuybook">
+      {{#each search}}
+      <ul>
+        
+
+        <div class="text">
+
+         <li> <div id="image">{{> image}}</div></li>
+          <div id="author">
+             {{title}} <br>ISBN:{{isbn}}  <br>
+            Author: {{firstname}} {{lastname}}<br> Seller: {{username}}</div>
+          {{debug}}
+        </div>
+      </ul>
+      {{/each}}
     </div>
-        </ul>
-    
-  {{/each}}
-</div>
+
+  </div>
 
 </template>
-   
+
 
 <template name="searchBox">
   <input type="text" id="search-box" placeholder="search books here" />
@@ -36,7 +40,7 @@
   <div id='search-result'>
     <div id="search-meta">
       {{#if isLoading}}
-        searching ...
+      searching ...
       {{/if}}
     </div>
 
