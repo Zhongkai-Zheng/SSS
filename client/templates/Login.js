@@ -4,7 +4,7 @@ Template.login.events({
 			Router.go('/register');
 		},
 
-	'submit form': function(event){
+	'click #login': function(event){
 		event.preventDefault();
 		email = $('[name=email]').val();
 		var password = $('[name=password]').val();
