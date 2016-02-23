@@ -1,4 +1,3 @@
-Template.history.helpers({
-	'book': function() {
-    return Images.find({reserved: false});
-});
+tr{
+	color:white;
+}

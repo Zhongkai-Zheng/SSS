@@ -27,6 +27,7 @@ Template.SellBook.events({
 			newFile.isbn=isbn;
 			newFile.reserved = reserved;
 			newFile.reservedId = null;
+			newFile.createdAt = new Date();
 			}
 
 
