@@ -8,7 +8,7 @@ Template.register.events({
 				if(error) {
 					console.log(error.reason); 
 				} else {
-					 Router.go("login"); 
+					 Router.go("buybook"); 
 				}
 			});
 		}
