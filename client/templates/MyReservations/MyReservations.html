@@ -4,6 +4,7 @@
   {{#if noBooks}}
     <h2 id="noBooks">No books reserved</h2>
   {{/if}}
+  <div class="BookItem">
 	{{#each search}}
 		<ul>
           <li> {{title}} <br>ISBN:{{isbn}}  </li>
@@ -15,6 +16,7 @@
           </div>
         </ul>
 	{{/each}}
+</div>
 </template>
 
 <template name="reservedImage">
