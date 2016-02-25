@@ -5,6 +5,9 @@
     {{> searchResult}}
 
     <h1 class="white">Buy some books here</h1>
+    {{#if noBooks}}
+      <h2 class="white">Nothing here</h2>
+    {{/if}}
     <div class="listviewbuybook">
       {{#each search}}
       <ul>

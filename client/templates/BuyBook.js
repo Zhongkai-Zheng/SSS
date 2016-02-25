@@ -22,7 +22,7 @@ Template.buybook.helpers({
 
   },
   	'noBooks': function() {
-  		if (Images.find().count() == 0) {
+  		if (Images.find({reserved: false}).count() == 0) {
   			return true;
   		} else {
   			return false;

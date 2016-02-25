@@ -1,0 +1,22 @@
+<template name="ReservationDetail">
+	{{>layout}}
+	<div class="reservationDetail">
+		<div class="adjust">
+		<h5>Book Details</h5><br>
+		<!-- <form class="searchForm">
+		Title:<input type="text" name="title"><br>
+		Course number:<input type="text" name="courseNum"><br>
+		<input type="submit" value="Submit">
+		</form> -->
+		<div class="bookinfo">
+		<h7>Title: {{title}}</h7><br>
+		<h7>Author: {{firstname}} {{lastname}}</h7><br>
+		</div>
+		<div class="imagespace">
+		<img id="photo" src={{url}} />
+		<br>
+		<button id="cancel">Cancel Reservation</button>
+		</div>
+		</div>
+	</div>
+</template>

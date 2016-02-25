@@ -10,7 +10,7 @@ Template.register.events({
 					console.log(error.reason); 
 				} else {
 					toastr.success("Register successful!")
-					 Router.go("login"); 
+					Router.go("buybook"); 
 				}
 			});
 		}
