@@ -20,10 +20,9 @@ p{
 
 body{
 	background-image:url('http://www.hdwallpapers.in/walls/abstract_color_background_picture_8016-wide.jpg');
-	background-size: cover; 
+	background-size: 100%; 
 	/*color:blue;
-	font-size: 14px; 
-	background-size: cover;*/
+	font-size: 14px; */
 	
 }
 
