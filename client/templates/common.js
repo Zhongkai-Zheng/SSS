@@ -4,3 +4,7 @@ UI.registerHelper('startscreen', function() {
 		Router.go('login');
 	}
 })
+
+Meteor.startup(function() {
+    Meteor.subscribe('images', 0);
+});

@@ -8,11 +8,12 @@
 				<th>Book Name</th>
 				<th>Seller</th>
 				<th>Author</th>
+				<button id="delete">Delete</button>
 			</tr>
 		</thead>
 		<tbody>
-			{{#each book}}
-			<tr class="book {{isSelected}}">
+			{{#each images}}
+			<tr class="images {{isSelected}}">
 				<td>{{title}}</td>
 				<td>{{username}}</td>
 				<td>{{firstname}}{{lastname}}</td>
