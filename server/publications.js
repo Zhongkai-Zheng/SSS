@@ -1,7 +1,11 @@
 Meteor.publish('images', function(limit) {
-  check(limit, Number);
+	check(limit, Number);
 
-  return Images.find({}, {
-    limit: limit
-  });
+	if (limit != 0) {
+		return Images.find({}, {
+			limit: limit
+		});
+	} else {
+		return Images.find();
+	}
 });

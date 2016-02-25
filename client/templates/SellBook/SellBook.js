@@ -1,4 +1,4 @@
-PlayersList = new Mongo.Collection('books');
+//PlayersList = new Mongo.Collection('books');
 Template.SellBook.events({
 	'submit form': function(event, template){
 

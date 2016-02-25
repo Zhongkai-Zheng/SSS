@@ -2,3 +2,7 @@
 .table{
 	color: white;
 }
+.selected{
+    background-color: white;
+    color:black;
+}
