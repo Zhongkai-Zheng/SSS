@@ -10,9 +10,11 @@ Template.login.events({
 		var password = $('[name=password]').val();
 		Meteor.loginWithPassword(email, password, function(error){
 			if(error){
+				toastr.error("Password or username is incorrect");
 				console.log(error.reason);
 			} 
 			else{
+				toastr.success("Login successful!");
 				Router.go("/");
 			}
 		});

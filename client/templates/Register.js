@@ -6,8 +6,10 @@ Template.register.events({
 
 			Accounts.createUser({email: email, password: password}, function(error){
 				if(error) {
+					toastr.error("Username is invalid or already exists!");
 					console.log(error.reason); 
 				} else {
+					toastr.success("Register successful!")
 					 Router.go("login"); 
 				}
 			});
