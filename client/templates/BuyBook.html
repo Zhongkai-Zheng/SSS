@@ -13,6 +13,7 @@
       <ul>
       {{#each search}}
       <li>
+        <a href="/buybook2/{{_id}}">
         <div class="text">
         <div id="image">{{> image}}</div>
           <div id="author">
@@ -20,6 +21,7 @@
             Author: {{firstname}} {{lastname}}<br> Seller: {{username}}</div>
           {{debug}}
         </div>
+        </a>
       </li>
       {{/each}}
       </ul>
