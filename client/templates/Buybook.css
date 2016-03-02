@@ -2,7 +2,6 @@
   color: white;
 }
 
-
 li{
   font-size: 20px;
   color: white;
@@ -10,14 +9,17 @@ li{
   padding-top: 30px;
   text-align: left;
 }
+
 #author{
   font-size: 2em;
   margin-left: 2em;
 }
+
 #image{
   width: auto;
   height: 150px;
 }
+
 .text{
   font-size: 10px;
   width:800px;
@@ -26,7 +28,6 @@ li{
   color:white;
   flex-direction: row;
   align-items: center;
-
 }
 
 #search-box {
@@ -57,9 +58,12 @@ li{
 .listviewbuybook{
   overflow: scroll;
   height: 400px;
-
 } 
 
 .package .name {
   font-weight: 400;
+}
+
+.text:hover{
+  background-color: black;
 }

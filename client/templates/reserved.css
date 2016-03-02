@@ -1,3 +1,4 @@
+
 .reserved{
 	color: white;
 	text-align: center;
@@ -8,3 +9,8 @@
 #back{
 	color: black;
 }
+/*
+.onlyButtonOnReserved{
+	text-align: center;
+	padding-top: 50px;
+	*/
