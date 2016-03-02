@@ -38,14 +38,13 @@ Template.buybook.helpers({
 
     'click .text':function(){
     Session.set('clickedImage', this._id);
-    
+    console.log("you clicked on the thing");
   },
   
 });
 
   Template.buybook.created = function() {
   var self = this;
-
   self.limit = new ReactiveVar;
   self.limit.set(parseInt(Meteor.settings.public.recordsPerPage));
   

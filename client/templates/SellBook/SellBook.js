@@ -22,7 +22,7 @@ Template.SellBook.events({
 			newFile.username = Meteor.user().emails[0].address;
 			newFile.userId = user._id;
 			newFile.title = title;
-			newFile.firstname = firstname;
+			newFile.firstname = firstname + " ";
 			newFile.lastname = lastname;
 			newFile.isbn=isbn;
 			newFile.reserved = reserved;
