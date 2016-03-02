@@ -17,22 +17,28 @@ Template.buybook.helpers({
 	'clickedImage': function() {
     return this._id == Session.get('clickedImage') ? 'text-primary' : '';
   },
- 	'images': function() {
-    return Images.find({reserved: false});
 
+ 	'images': function() {
+    return Images.find();
   },
-  	'noBooks': function() {
-  		if (Images.find({reserved: false}).count() == 0) {
+  'noBooks': function() {
+  		if (Images.find().count() == 0) {
   			return true;
   		} else {
   			return false;
   		}
   	},
+
 });
 
   Template.buybook.events({
   	'click .assignment': function() {
     Session.set('clickedImage', this._id);
+  },
+
+    'click .text':function(){
+    Session.set('clickedImage', this._id);
+    
   },
   
 });
@@ -61,16 +67,16 @@ Template.buybook.rendered = function() {
 
 Template.buybook.helpers({
   'images': function() {
-    return Images.find({reserved: false});
+    return Images.find({});
   },
   search: function() {
     var search = Session.get('search-box');
     if (search == '') {
-      return Images.find({reserved: false}, {$sort: {title: 1}}); 
+      return Images.find({}, {$sort: {title: 1}}); 
     } else if (search !='' && !$('#searchbyisbn').prop('checked')){
-      return Images.find({title: {$regex: '(' + search + ')', $options: 'i'}, reserved: false}, {$sort: {title: 1}});
+      return Images.find({title: {$regex: '(' + search + ')', $options: 'i'}}, {$sort: {title: 1}});
     } else {
-      return Images.find({isbn: {$regex: '(' + search + ')', $options: 'i'}, reserved: false}, {$sort: {isbn: 1}});
+      return Images.find({isbn: {$regex: '(' + search + ')', $options: 'i'}}, {$sort: {isbn: 1}});
     }
   }
 });
