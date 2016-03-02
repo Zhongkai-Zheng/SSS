@@ -13,17 +13,19 @@
     <h2 id="noBooks">No books reserved</h2>
   {{/if}}
   <div class="BookItem">
-	{{#each search}}
-		<ul>
-          <li> {{title}} <br>ISBN:{{isbn}}  </li>
-
+	
+  <ul>
+  {{#each search}}
+          <li>  
           <div class="text">
             <div id="image">{{> reservedImage}}</div>
-            <div id="author">Author: {{firstname}} {{lastname}}<br> Seller: {{username}}</div>
+            <div id="author">{{title}} <br>ISBN:{{isbn}} <br>Author: {{firstname}} {{lastname}}<br> Seller: {{username}}</div>
             {{debug}}
           </div>
-        </ul>
+          </li>
 	{{/each}}
+  </ul>
+
 </div>
 </template>
 

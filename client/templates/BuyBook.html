@@ -9,22 +9,22 @@
       <h2 class="white">Nothing here</h2>
     {{/if}}
     <div class="listviewbuybook">
-      {{#each search}}
+      
       <ul>
-        
-
+      {{#each search}}
+      <li>
         <div class="text">
-
-         <li> <div id="image">{{> image}}</div></li>
+        <div id="image">{{> image}}</div>
           <div id="author">
              {{title}} <br>ISBN:{{isbn}}  <br>
             Author: {{firstname}} {{lastname}}<br> Seller: {{username}}</div>
           {{debug}}
         </div>
-      </ul>
+      </li>
       {{/each}}
-    </div>
+      </ul>
 
+    </div>
   </div>
 
 </template>

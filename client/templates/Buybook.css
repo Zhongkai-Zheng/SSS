@@ -63,3 +63,7 @@ li{
 .package .name {
   font-weight: 400;
 }
+
+.text:hover{
+  background-color: black;
+}

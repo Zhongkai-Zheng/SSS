@@ -17,22 +17,28 @@ Template.buybook.helpers({
 	'clickedImage': function() {
     return this._id == Session.get('clickedImage') ? 'text-primary' : '';
   },
+
  	'images': function() {
     return Images.find({reserved: false});
-
   },
-  	'noBooks': function() {
+  'noBooks': function() {
   		if (Images.find({reserved: false}).count() == 0) {
   			return true;
   		} else {
   			return false;
   		}
   	},
+
 });
 
   Template.buybook.events({
   	'click .assignment': function() {
     Session.set('clickedImage', this._id);
+  },
+
+    'click .text':function(){
+    Session.set('clickedImage', this._id);
+    
   },
   
 });
