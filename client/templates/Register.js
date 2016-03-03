@@ -17,15 +17,15 @@ Template.register.events({
    			 	console.log('ret')
 });
 
-			// Accounts.createUser({email: email, password: password}, function(error){
-			// 	if(error) {
-			// 		toastr.error("Username is invalid or already exists!");
-			// 		console.log(error.reason); 
-			// 	} else {
-			// 		toastr.success("Register successful!")
-			// 		Router.go("buybook"); 
-			// 	}
-			// });
+			Accounts.createUser({email: email, password: password}, function(error){
+				if(error) {
+					toastr.error("Username is invalid or already exists!");
+					console.log(error.reason); 
+				} else {
+					toastr.success("Register successful!")
+					Router.go("buybook"); 
+				}
+			});
 			console.log("is going through");
 		}
 });
