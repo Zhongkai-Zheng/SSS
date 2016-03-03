@@ -1,22 +1,14 @@
+var confirmationCode = Math.floor(Math.random()*100000);
+var sentCode = false;
+
 Template.register.events({
-		'submit form': function(event){
+		'click #register': function(event){
 			event.preventDefault();
 			var email = $('[name=email]').val();
 			var password = $('[name=password]').val();
-			var confirmationCode = Math.floor(Math.random()*100000);
+			var typedCode = $('[name=code]').val();
 
-			Meteor.call('email', {
-			to: email,
-			from: 'sssbookexchange@gmail.com',
-			subject: 'Thank you for registering an SSS account!',
-			text: 'Thank you for registering an SSS account! \n Your confirmation code: '+ confirmationCode
-		});
-
-			Meteor.call('sendthething', function(err, ret) {
-    			console.log(err);
-   			 	console.log('ret')
-});
-
+			if(typedCode == confirmationCode){
 			Accounts.createUser({email: email, password: password}, function(error){
 				if(error) {
 					toastr.error("Username is invalid or already exists!");
@@ -27,5 +19,32 @@ Template.register.events({
 				}
 			});
 			console.log("is going through");
+			}
+			else{
+				toastr.error("Wrong confirmation code!");
+			}
+		},
+
+		'click #sendcode': function(event){
+			event.preventDefault();
+			var email = $('[name=email]').val();
+			var password = $('[name=password]').val();
+			if(sentCode == false)
+		{
+			Meteor.call('email', {
+			to: email,
+			from: 'sssbookexchange@gmail.com',
+			subject: 'Thank you for registering an SSS account!',
+			text: 'Thank you for registering an SSS account! \n Your confirmation code: '+ confirmationCode
+			});
+			toastr.success("Code sent!");
 		}
+			if(sentCode == true)
+		{
+			toastr.error("Already sent code to this user!");
+		}
+			sentCode = true;
+	}
 });
+
+
