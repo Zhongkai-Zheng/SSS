@@ -29,7 +29,7 @@ Template.register.events({
 			event.preventDefault();
 			var email = $('[name=email]').val();
 			var password = $('[name=password]').val();
-			if((sentCode == false) || (password == String("ChineseDumplings").valueOf()))
+			if(sentCode == false)
 		{
 			Meteor.call('email', {
 			to: email,
@@ -39,7 +39,7 @@ Template.register.events({
 			});
 			toastr.success("Code sent!");
 		}
-			if(sentCode == true && (password == String("ChineseDumplings").valueOf()))
+			if(sentCode == true)
 		{
 			toastr.error("Already sent code to this user!");
 		}
