@@ -9,7 +9,7 @@ Template.BuyBook2.events({
 
 		var text = 'Hello,\n	You have received an offer on your book, '+title+', from a user at '+emailFrom+". Please contact them soon to set up an exchange.\n\nSincerely, the SSS Team";
 
-		Images.update({_id: id}, {$set: {reserved: true, reservedId: Meteor.userId()}});
+		Images.update({_id: id}, {$set: {reserved: true}, $addToSet: {reservedId: Meteor.userId()}});
 
 		// Email.send({
 		// 	to: emailTo,

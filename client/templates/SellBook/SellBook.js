@@ -26,12 +26,10 @@ Template.SellBook.events({
 			newFile.lastname = lastname;
 			newFile.isbn=isbn;
 			newFile.reserved = reserved;
-			newFile.reservedId = null;
+			newFile.reservedId = [];
 			newFile.createdAt = new Date();
 			}
 
-
-			// TODO: Create GridFS collection and add that here
 
 			Images.insert(newFile, function (err, fileObj) {
 				if (err) {
